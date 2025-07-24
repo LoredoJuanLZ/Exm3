@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelería ColorBurst</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="papeleria.css">
+</head>
+<body>
+    <input type="checkbox" id="toggle-sidebar" hidden>
+    <label for="toggle-sidebar" class="sidebar-toggle">☰</label>
+
+    <aside class="sidebar">
+        <h3>Categorías</h3>
+        <ul>
+            <li><label for="todos">📦 Todos</label></li>
+            <li><label for="escritura">✏️ Escritura y Dibujo</label></li>
+            <li><label for="cuadernos">📓 Cuadernos</label></li>
+            <li><label for="arte">🎨 Arte</label></li>
+            <li><label for="accesorios">✂️ Accesorios</label></li>
+        </ul>
+    </aside>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="logoPapeleria (1).png" alt="Logo de la Papelería" class="logo">
+                <h1>Papelería ColorBurst</h1>
+            </div>
+            
+            <ul class="menu">
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit">🔍</button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="fondo-imagen-izquierda"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-texto">
+                    <h1>¡Bienvenidos a ColorBurst!</h1>
+                    <p>Todo lo que necesitas para tu oficina, escuela y arte. Calidad, color y creatividad.</p>
+                </div>
+                <div class="hero-imagen">
+                    <a href="info.html"> <img src="logito3d.png" alt="Papelería Colorida"></a>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos">
+        <h2>Categorías de Productos</h2>
+
+        <input type="radio" name="filtro" id="todos" checked hidden>
+        <input type="radio" name="filtro" id="escritura" hidden>
+        <input type="radio" name="filtro" id="cuadernos" hidden>
+        <input type="radio" name="filtro" id="arte" hidden>
+        <input type="radio" name="filtro" id="accesorios" hidden>
+
+        <div class="categorias-botones">
+            <label for="todos">Todos</label>
+            <label for="escritura">Escritura y Dibujo</label>
+            <label for="cuadernos">Cuadernos</label>
+            <label for="arte">Arte</label>
+            <label for="accesorios">Accesorios</label>
+        </div>
+
+        <div class="grid">
+            <div class="categoria-producto producto escritura">
+                <img src="lapiz.jpg" alt="Lápiz HB">
+                <h4>Lápiz HB</h4>
+                <p>$5.00 MXN</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="categoria-producto producto escritura">
+                <img src="plumaazul.webp" alt="Pluma Azul BIC">
+                <h4>Pluma Azul BIC</h4>
+                <p>$6.50 MXN</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="categoria-producto producto escritura">
+                <img src="marcadores.jpg" alt="Marcadores de Colores">
+                <h4>Marcadores de Colores (paquete x12)</h4>
+                <p>$55.00 MXN</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+
+            <div class="categoria-producto producto cuadernos">
+                <img src="cuaderno.webp" alt="Cuaderno Profesional Rayado">
+                <h4>Cuaderno Profesional Rayado</h4>
+                <p>$32.00 MXN</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="categoria-producto producto cuadernos">
+                <img src="espiral.jpg" alt="Libreta Espiral Tamaño Carta">
+                <h4>Libreta Espiral Tamaño Carta</h4>
+                <p>$28.00 MXN</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+
+            <div class="categoria-producto producto arte">
+                <img src="acuarelas.jpg" alt="Acuarelas PRANG">
+                <h4>Acuarelas PRANG (8 colores)</h4>
+                <p>$42.00 MXN</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="categoria-producto producto arte">
+                <img src="pinceles.jpg" alt="Pinceles surtidos">
+                <h4>Pinceles surtidos (paquete x5)</h4>
+                <p>$36.00 MXN</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+
+            <div class="categoria-producto producto accesorios">
+                <img src="tijeras.jpg" alt="Tijeras Escolares">
+                <h4>Tijeras Escolares</h4>
+                <p>$18.00 MXN</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="categoria-producto producto accesorios">
+                <img src="pegamento.jpg" alt="Pegamento en Barra">
+                <h4>Pegamento en Barra 40g</h4>
+                <p>$12.00 MXN</p>
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <input type="checkbox" id="toggle-cart" hidden>
+    <label for="toggle-cart" class="cart-toggle-btn">🛒</label>
+
+    <div class="carrito-container">
+        <aside class="carrito">
+            <h2>🛒 Carrito</h2>
+            <ul>
+                <li>Lápiz de colores - $25.00</li>
+                <li>Cuaderno rayado - $40.00</li>
+            </ul>
+            <p class="total">Total: $65.00</p>
+            <button class="comprar">Finalizar compra</button>
+            <div class="mensaje-compra">¡Compra realizada con éxito!</div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 <strong>Papelería ColorBurst</strong> — Todos los derechos reservados.</p>
+            <p>
+                <strong>Hecho por:</strong> Juan Manuel Azuara Loredo<br>
+                <strong>Grupo:</strong> 3er Tetramestre<br>
+                <strong>Materia:</strong> Paquetes de Cómputo 3<br>
+                <strong>Docente:</strong> Mtra. Ing. Alexia del Carmen Castro Vázquez<br>
+                <strong>Fecha:</strong> 06 de agosto de 2025
+            </p>
+            <hr style="margin: 25px auto; width: 60%; border: 1px solid #ccc; opacity: 0.3;">
+            <p id="contacto"><strong>¿Deseas ponerte en contacto con nosotros?</strong></p>
+            <p>
+                ✉️ Correo: <a href="mailto:contacto@colorburst.com">contacto@colorburst.com</a><br>
+                📞 Teléfono: <a href="tel:+528681234567">+52 868 123 4567</a><br>
+                📍 Dirección: Calle de los Colores 123, Matamoros, Tamaulipas, México
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
