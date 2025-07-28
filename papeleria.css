@@ -605,3 +605,8 @@ body.about-page::before {
     background-color: rgba(255, 255, 255, 0.9); /* Ejemplo: un color crema semitransparente */
     z-index: -1; /* Asegura que esté detrás del contenido pero encima de la imagen */
 }
+
+body.about-page .container {
+    margin-left: auto;
+    margin-right: auto;
+}
