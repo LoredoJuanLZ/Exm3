@@ -1,82 +1,65 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- inicio de la página -->
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros - Papelería ColorBurst</title>
+<head> <!-- inicio del head -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="icono.png" type="image/jpeg"> <!-- se pone la imagen "icono.png" como icono de la página -->
 
-    <link rel="stylesheet" href="papeleria.css">
-</head>
-<body class="about-page">
-    <div id="preloader">
-        <div class="curtain left"></div>
-        <div class="logo-container-preload">
-            <img src="logoPapeleria (1).png" alt="Logo de la Papelería" class="logo-preload">
+    <meta charset="UTF-8"> <!-- tipo de caracteres que acepta la página -->
+
+    <title>Sobre Nosotros - Papelería ColorBurst</title> <!-- título de la pestaña -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"> <!-- se importa un estilo de letra -->
+
+    <link rel="stylesheet" href="papeleria.css"> <!-- conexión con el archivo de estilos -->
+</head> <!-- fin del head -->
+
+<body class="about-page"> <!-- inicio del cuerpo de la página con clase about-page -->
+
+    <div id="preloader"> <!-- animación de carga antes de mostrar el contenido -->
+        <div class="curtain left"></div> <!-- parte izquierda de la cortina -->
+        <div class="logo-container-preload"> <!-- contenedor del logo mientras carga -->
+            <img src="logoPapeleria (1).png" alt="Logo de la Papelería" class="logo-preload"> <!-- logo visible en el preloader -->
         </div>
-        <div class="curtain right"></div>
+        <div class="curtain right"></div> <!-- parte derecha de la cortina -->
     </div>
 
-    <div class="main-content">
-        <input type="checkbox" id="toggle-sidebar" hidden>
-        <label for="toggle-sidebar" class="sidebar-toggle" style="display: none;">☰</label>
-        <aside class="sidebar" style="display: none;">
-            <h3>Categorías</h3>
-            <ul>
-                <li><label for="todos">📦 Todos</label></li>
-                <li><label for="escritura">✏️ Escritura y Dibujo</label></li>
-                <li><label for="cuadernos">📓 Cuadernos</label></li>
-                <li><label for="arte">🎨 Arte</label></li>
-                <li><label for="accesorios">✂️ Accesorios</label></li>
-            </ul>
-        </aside>
+    <div class="main-content"> <!-- contenido principal -->
 
+        <!-- inicio del header con navbar -->
         <header>
             <nav class="navbar">
-                <div class="logo-container">
+                <div class="logo-container"> <!-- contenedor del logo y nombre -->
                     <img src="logoPapeleria (1).png" alt="Logo de la Papelería" class="logo">
                     <h1>Papelería ColorBurst</h1>
                 </div>
                 
-                <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                <ul class="menu"> <!-- menú de navegación -->
+                    <li><a href="index.html">Inicio</a></li> <!-- link al index -->
+                    <li><a href="#contacto">Contacto</a></li> <!-- link al contacto -->
                 </ul>
 
-                <div class="search-bar">
+                <div class="search-bar"> <!-- barra de búsqueda visual -->
                     <input type="text" placeholder="Buscar...">
                     <button type="submit">🔍</button>
                 </div>
             </nav>
         </header>
+        <!-- fin del header -->
 
+        <!-- inicio del contenido principal -->
         <main class="container">
-            <section id="sobre-nosotros" style="text-align: center;">
-                <h2>Sobre Nosotros - Papelería ColorBurst</h2>
-                <p style="max-width: 800px; margin: 20px auto; font-size: 1.1em; color: #555;">
+            <section id="sobre-nosotros" style="text-align: center;"> <!-- sección sobre nosotros -->
+                <h2>Sobre Nosotros - Papelería ColorBurst</h2> <!-- título de la sección -->
+                <p style="max-width: 800px; margin: 20px auto; font-size: 1.1em; color: #555;"> <!-- párrafo con info de la papelería -->
                     En Papelería ColorBurst, creemos firmemente que la creatividad y la productividad se desatan cuando se tienen las herramientas adecuadas y un entorno inspirador. Nuestro nombre, "ColorBurst", no es casualidad; representa nuestra pasión por inundar cada espacio con una explosión de tonalidades vibrantes y posibilidades ilimitadas. Desde el delicado trazo de un lápiz de grafito hasta la intensidad de un pigmento de acuarela, cada producto que ofrecemos está pensado para encender la chispa de la imaginación y apoyar tus proyectos, ya sean escolares, de oficina o artísticos. Nos esforzamos por ser tu destino principal para todo lo relacionado con papelería, ofreciendo no solo productos de alta calidad, sino también una experiencia que celebre el arte de escribir, dibujar y crear. Con ColorBurst, cada día es una oportunidad para añadir un toque más de color a tu vida.
                 </p>
             </section>
         </main>
+        <!-- fin del contenido principal -->
 
-        <input type="checkbox" id="toggle-cart" hidden>
-        <label for="toggle-cart" class="cart-toggle-btn" style="display: none;">🛒</label>
-        <div class="carrito-container" style="display: none;">
-            <aside class="carrito">
-                <h2>🛒 Carrito</h2>
-                <ul>
-                    <li>Lápiz de colores - $25.00</li>
-                    <li>Cuaderno rayado - $40.00</li>
-                </ul>
-                <p class="total">Total: $65.00</p>
-                <button class="comprar">Finalizar compra</button>
-                <div class="mensaje-compra">¡Compra realizada con éxito!</div>
-            </aside>
-        </div>
-
+        <!-- inicio del footer (exactamente el mismo que el de la pagina principal)-->
         <footer>
-            <div class="container">
+            <div class="container"> <!-- contenedor para organizar el contenido del pie -->
                 <p>&copy; 2025 <strong>Papelería ColorBurst</strong> — Todos los derechos reservados.</p>
                 <p>
                     <strong>Hecho por:</strong> Juan Manuel Azuara Loredo<br>
@@ -85,15 +68,17 @@
                     <strong>Docente:</strong> Mtra. Ing. Alexia del Carmen Castro Vázquez<br>
                     <strong>Fecha:</strong> 06 de agosto de 2025
                 </p>
-                <hr style="margin: 25px auto; width: 60%; border: 1px solid #ccc; opacity: 0.3;">
+                <hr style="margin: 25px auto; width: 60%; border: 1px solid #ccc; opacity: 0.3;"> <!-- línea decorativa -->
                 <p id="contacto"><strong>¿Deseas ponerte en contacto con nosotros?</strong></p>
-                <p>
+                <p> <!-- datos inventados de contacto -->
                     ✉️ Correo: <a href="mailto:contacto@colorburst.com">contacto@colorburst.com</a><br>
                     📞 Teléfono: <a href="tel:+528681234567">+52 868 123 4567</a><br>
                     📍 Dirección: Calle de los Colores 123, Matamoros, Tamaulipas, México
                 </p>
             </div>
         </footer>
-    </div> <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</body>
-</html>
+        <!-- fin del footer -->
+
+    </div> <!-- fin del contenedor principal -->
+</body> <!-- fin del body -->
+</html> <!-- fin del documento -->
