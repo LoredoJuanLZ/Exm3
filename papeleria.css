@@ -1,4 +1,4 @@
-/* Estilos para el preloader (animación inicial) */
+/* Estilos para el preloader (animación inicial para la pagina de sobre nosotros) */
 #preloader {
     position: fixed;
     top: 0;
@@ -363,6 +363,45 @@ header {
     transform: scale(0.95);
 }
 
+
+
+/* Estilo para labels cuando su input está checked */
+#toggle-sidebar:checked ~ .sidebar {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* boton del sidebar cuando este esta oculto */
+#toggle-sidebar:checked ~ .sidebar-toggle {
+    left: 10px;
+}
+
+/* destaca la categoria seleccionada en el sidebar */
+.sidebar input[type="radio"]:checked + label {
+    background-color: #c53d3d;
+    color: white; /* Asegura el contraste al seleccionar */
+    border-radius: 5px; /* borde para destacar */
+    padding: 5px 10px; /* Ajusta el padding para el fondo */
+}
+
+
+/* Botón toggle sidebar */
+.sidebar-toggle {
+    position: fixed;
+    top: 110px;
+    left: 230px;
+    z-index: 1000;
+    background-color: #ff4c4c;
+    color: white;
+    padding: 8px 12px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: left 0.3s ease;
+}
+
+
 .categorias-botones label {
     user-select: none;
     transition: transform 0.1s ease, background-color 0.3s ease;
@@ -383,42 +422,38 @@ header {
     transform: scale(0.95);
 }
 
-/* Estilo para labels cuando su input asociado está checked */
-/* Sidebar category selection */
-#toggle-sidebar:checked ~ .sidebar {
-    transform: translateX(-100%);
-    opacity: 0;
-    pointer-events: none;
+/* Categorías Filter Buttons */
+.categorias-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-/* Toggle button position when sidebar is hidden */
-#toggle-sidebar:checked ~ .sidebar-toggle {
-    left: 10px;
-}
-
-/* Highlight selected category in sidebar */
-.sidebar input[type="radio"]:checked + label {
+/* Highlight selected category filter button */
+input#todos:checked ~ .categorias-botones label[for="todos"],
+input#escritura:checked ~ .categorias-botones label[for="escritura"],
+input#cuadernos:checked ~ .categorias-botones label[for="cuadernos"],
+input#arte:checked ~ .categorias-botones label[for="arte"],
+input#accesorios:checked ~ .categorias-botones label[for="accesorios"] {
     background-color: #c53d3d;
-    color: white; /* Asegura el contraste al seleccionar */
-    border-radius: 5px; /* Pequeño borde para destacar */
-    padding: 5px 10px; /* Ajusta el padding para el fondo */
+    transform: scale(1.05);
 }
 
-
-/* Botón toggle sidebar */
-.sidebar-toggle {
-    position: fixed;
-    top: 110px;
-    left: 230px;
-    z-index: 1000;
-    background-color: #ff4c4c;
-    color: white;
-    padding: 8px 12px;
-    font-size: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: left 0.3s ease;
+/* Product visibility based on filter */
+.categoria-producto {
+  display: none;
 }
+
+#todos:checked ~ .grid .categoria-producto,
+#escritura:checked ~ .grid .escritura,
+#cuadernos:checked ~ .grid .cuadernos,
+#arte:checked ~ .grid .arte,
+#accesorios:checked ~ .grid .accesorios {
+  display: block;
+}
+
 
 /* Carrito */
 .cart-toggle-btn {
@@ -551,50 +586,15 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Categorías Filter Buttons */
-.categorias-botones {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-/* Highlight selected category filter button */
-input#todos:checked ~ .categorias-botones label[for="todos"],
-input#escritura:checked ~ .categorias-botones label[for="escritura"],
-input#cuadernos:checked ~ .categorias-botones label[for="cuadernos"],
-input#arte:checked ~ .categorias-botones label[for="arte"],
-input#accesorios:checked ~ .categorias-botones label[for="accesorios"] {
-    background-color: #c53d3d;
-    transform: scale(1.05);
-}
-
-/* Product visibility based on filter */
-.categoria-producto {
-  display: none;
-}
-
-#todos:checked ~ .grid .categoria-producto,
-#escritura:checked ~ .grid .escritura,
-#cuadernos:checked ~ .grid .cuadernos,
-#arte:checked ~ .grid .arte,
-#accesorios:checked ~ .grid .accesorios {
-  display: block;
-}
-
-/* Puedes añadir esto al final de tu archivo papeleria.css, o cerca de los estilos del body si lo prefieres */
-
-body.about-page { /* Le asignaremos esta clase al body de sobre-nosotros.html */
-    background-image: url('logoPapeleria\ \(1\).png'); /* Reemplaza con la ruta de tu imagen */
+body.about-page { /* Le asignaremos esta clase al body de info.html */
+    background-image: url('logoPapeleria\ \(1\).png'); /* logo */
     background-size: cover; /* Cubre todo el área sin dejar espacios */
     background-position: center center; /* Centra la imagen */
-    background-attachment: fixed; /* Opcional: la imagen se queda fija al hacer scroll */
-    background-repeat: no-repeat; /* Asegura que la imagen no se repita */
+    background-attachment: fixed; /* la imagen se queda fija al hacer scroll */
+    background-repeat: no-repeat; /* asegura que la imagen no se repita */
 }
 
-/* Puedes añadir un pseudo-elemento o un overlay para estilizar más la imagen,
-   por ejemplo, añadiendo una capa de color semitransparente encima */
+
 body.about-page::before {
     content: '';
     position: fixed;
@@ -602,7 +602,7 @@ body.about-page::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Ejemplo: un color crema semitransparente */
+    background-color: rgba(255, 255, 255, 0.9); /* color crema semitransparente */
     z-index: -1; /* Asegura que esté detrás del contenido pero encima de la imagen */
 }
 
@@ -610,3 +610,4 @@ body.about-page .container {
     margin-left: auto;
     margin-right: auto;
 }
+
