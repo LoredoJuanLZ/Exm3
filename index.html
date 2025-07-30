@@ -1,22 +1,34 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Inicio de la pagina -->
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papelería ColorBurst</title>
+<head> <!-- Encabezado -->
+<link rel="icon" href="icono.png" type="image/jpeg"> <!-- Se pone la imagen "icono.png" como icono de la pagina-->
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" /> <!-- Los caracteres que maneja la pagina -->
+  <meta property="og:title" content="Papelería ColorBurst, ¡Conoce nuestros precios!" /><!-- Titulo a poner cuando se pase el link de esta pagina a traves de whatsapp y apps de meta -->
+  <meta property="og:description" content="Conoce nutros precios en nuestra pagina oficial!" /> <!-- Lo de arriba es el titulo, este es la descripcion -->
+  <meta property="og:image" content="https://loredojuanlz.github.io/Exm3/index.html/ESTEOFERTAS.png" /> <!-- Esta es la imagen que saldra en la invitacion -->
+  <meta property="og:url" content="https://loredojuanlz.github.io/Exm3/index.html" /> <!-- Este es el link al que te llevara la invitacion -->
+  <meta property="og:type" content="website" />
 
-    <link rel="stylesheet" href="papeleria.css">
-</head>
-<body>
+    <title>Papelería ColorBurst</title> <!-- Titulo de la pagina -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"> <!-- Un estilo de letra para usar -->
+
+    <link rel="stylesheet" href="papeleria.css"> <!-- Conexion al css-->
+</head><!-- Fin del encabezado -->
+
+<body><!-- Cuerpo de la pagina -->
+    <img src="ESTEOFERTAS.png" alt="preview" style="display: none;"> <!-- Esta es la imagen que se usara en la invitacion, en el estilo hice que no se vea ya que no la ocupo en la página principal -->
+
+<!-- Inicio del sidebar -->
+
     <input type="checkbox" id="toggle-sidebar" hidden>
     <label for="toggle-sidebar" class="sidebar-toggle">☰</label>
 
     <aside class="sidebar">
         <h3>Categorías</h3>
-        <ul>
-            <li><label for="todos">📦 Todos</label></li>
+        <ul>                                                                     <!-- creo un pequeño sidebar para controlar las categorias de productos -->
+            <li><label for="todos">📦 Todos</label></li>                         <!-- tiene de clase ese mismo nombre para darle estilos en el css -->
             <li><label for="escritura">✏️ Escritura y Dibujo</label></li>
             <li><label for="cuadernos">📓 Cuadernos</label></li>
             <li><label for="arte">🎨 Arte</label></li>
@@ -24,65 +36,73 @@
         </ul>
     </aside>
 
+<!-- Fin del sidebar -->
+
+<!-- Inicio del header con su navbar -->
     <header>
         <nav class="navbar">
             <div class="logo-container">
                 <img src="logoPapeleria (1).png" alt="Logo de la Papelería" class="logo">
                 <h1>Papelería ColorBurst</h1>
             </div>
-            
+                                                                            <!-- dentro del nav se establece el logo y unos pequeños links que llevan a los productos y a los contactos -->
             <ul class="menu">
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
 
             <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
+                <input type="text" placeholder="Buscar..."> <!-- se agrga una barra de busqueda (no funcional) de clase search-bar para darle estilos en el css -->
                 <button type="submit">🔍</button>
             </div>
         </nav>
     </header>
+<!-- Fin del header -->
 
-    <section id="hero">
-        <div class="fondo-imagen-izquierda"></div>
+<!-- Inicio del hero -->
+    <section id="hero"> <!-- En esta seccion es donde se maneja el banner de la pagina que muestra el logo en grande de la papeleria -->
+        <div class="fondo-imagen-izquierda"></div> <!-- Cree este div para darle estilos en el css a la imagen que aparece de fondo a la izquierda en el banner -->
         <div class="container">
             <div class="hero-content">
                 <div class="hero-texto">
                     <h1>¡Bienvenidos a ColorBurst!</h1>
-                    <p>Todo lo que necesitas para tu oficina, escuela y arte. Calidad, color y creatividad.</p>
+                    <p>Todo lo que necesitas para tu oficina, escuela y arte. Calidad, color y creatividad.</p> <!-- Textos del banner -->
                 </div>
-                <div class="hero-imagen">
-                    <a href="info.html"> <img src="logito3d.png" alt="Papelería Colorida"></a>
+                <div class="hero-imagen"> <!-- Esta clase es para darle estilo a la imagen en grande del logo de la papeleria -->
+                    <a href="info.html"> <img src="logito3d.png" alt="Papelería Colorida"></a><!-- Este es el logito en kuestion que redirige a la pagina de sobre nosotros  -->
                    
                 </div>
             </div>
         </div>
-    </section>
+    </section> <!-- Fin de la seccion del banner -->
 
-    <section id="productos">
-        <h2>Categorías de Productos</h2>
+    <section id="productos"> <!-- adios banner, ola produktos -->
+        <h2>Categorías de Productos</h2> <!-- titulo -->
 
         <input type="radio" name="filtro" id="todos" checked hidden>
         <input type="radio" name="filtro" id="escritura" hidden>
-        <input type="radio" name="filtro" id="cuadernos" hidden>
-        <input type="radio" name="filtro" id="arte" hidden>
+        <input type="radio" name="filtro" id="cuadernos" hidden> <!-- se colocan varios input tipo radio que actuaran como botones, cada uno tiene su id especifico de cada categoria-->
+        <input type="radio" name="filtro" id="arte" hidden> <!-- todos con la propiedad hidden, es decir, no son visibles, y por defecto el unico activado es del id "todos" -->
         <input type="radio" name="filtro" id="accesorios" hidden>
 
-        <div class="categorias-botones">
+        <div class="categorias-botones"> <!-- se crea esta clase para darle estilos a los siguientes labels dentro de esta clase -->
             <label for="todos">Todos</label>
-            <label for="escritura">Escritura y Dibujo</label>
-            <label for="cuadernos">Cuadernos</label>
+            <label for="escritura">Escritura y Dibujo</label> 
+            <label for="cuadernos">Cuadernos</label>  <!-- a cada label se le asocia a traves del "for" un radio de los creados antes, cuando se le haga click a un label, se activa x radio -->
             <label for="arte">Arte</label>
             <label for="accesorios">Accesorios</label>
-        </div>
+        </div> <!-- fin de los botones de las categorias -->
 
-        <div class="grid">
+        <div class="grid"> <!-- se crea la clase grid para colocar todos los productos aqui, comentare solo lo del lapiz, ya que con los demas productos es lo mismo -->
+
+            <!-- se crea/coloca un div con la clase de producto que es (en este caso el lapiz es de escritura obviamente) -->
             <div class="categoria-producto producto escritura">
-                <img src="lapiz.jpg" alt="Lápiz HB">
-                <h4>Lápiz HB</h4>
-                <p>$5.00 MXN</p>
-                <button class="agregar">Agregar al carrito</button>
-            </div>
+                <img src="lapiz.jpg" alt="Lápiz HB"> <!-- se coloca la imagen del producto -->
+                <h4>Lápiz HB</h4> <!-- se coloca que es el producto -->
+                <p>$5.00 MXN</p> <!-- se coloca el precio del producto -->
+                <button class="agregar">Agregar al carrito</button> <!-- se coloca un boton puramente visual -->
+            </div> <!-- hasta aqui el del lapiz, todos los demas productos tienen la misma estructura. -->
+
             <div class="categoria-producto producto escritura">
                 <img src="plumaazul.webp" alt="Pluma Azul BIC">
                 <h4>Pluma Azul BIC</h4>
@@ -128,33 +148,36 @@
                 <p>$18.00 MXN</p>
                 <button class="agregar">Agregar al carrito</button>
             </div>
+
             <div class="categoria-producto producto accesorios">
                 <img src="pegamento.jpg" alt="Pegamento en Barra">
                 <h4>Pegamento en Barra 40g</h4>
                 <p>$12.00 MXN</p>
                 <button class="agregar">Agregar al carrito</button>
             </div>
-        </div>
-    </section>
 
-    <input type="checkbox" id="toggle-cart" hidden>
-    <label for="toggle-cart" class="cart-toggle-btn">🛒</label>
+        </div><!-- se acaba el grid de los productos -->
+    </section><!-- se acaba la seccion de los productos -->
 
-    <div class="carrito-container">
-        <aside class="carrito">
-            <h2>🛒 Carrito</h2>
+    <!-- Creacion del carrito -->
+    <input type="checkbox" id="toggle-cart" hidden> <!-- se crea un checkbox invisible con el id toggle-cart -->
+    <label for="toggle-cart" class="cart-toggle-btn">🛒</label> <!-- se crea un boton que al presionarse activa el checkbox -->
+
+    <div class="carrito-container"> <!-- se crea un contenedor para el carrito que a traves de un z-index en el css aparecera por encima de toda la pagina -->
+        <aside class="carrito"> <!-- se crea un aside con la clase carrito -->
+            <h2>🛒 Carrito</h2> <!--titulo para indicar al usuario que esta viendo su carrito -->
             <ul>
-                <li>Lápiz de colores - $25.00</li>
+                <li>Lápiz de colores - $25.00</li> <!-- una pequeña lista desordenada con 2 productos ya preasignados ya que no hay programacion, solo se muestra -->
                 <li>Cuaderno rayado - $40.00</li>
             </ul>
-            <p class="total">Total: $65.00</p>
-            <button class="comprar">Finalizar compra</button>
-            <div class="mensaje-compra">¡Compra realizada con éxito!</div>
-        </aside>
-    </div>
+            <p class="total">Total: $65.00</p> <!-- un texto de precio -->
+            <button class="comprar">Finalizar compra</button> <!-- boton para simular la compra-->
+            <div class="mensaje-compra">¡Compra realizada con éxito!</div> <!-- texto que se mostrara al clickear el boton de comprar -->
+        </aside> <!-- fin del aside del carrito -->
+    </div><!-- fin del contenedor del carrito -->
 
-    <footer>
-        <div class="container">
+    <footer> <!-- Footer de la pagina, con un pequeño estilo para que no se vea tan tieso -->
+        <div class="container"><!-- se crea un contenedor para darle estilo en el css -->
             <p>&copy; 2025 <strong>Papelería ColorBurst</strong> — Todos los derechos reservados.</p>
             <p>
                 <strong>Hecho por:</strong> Juan Manuel Azuara Loredo<br>
@@ -165,14 +188,12 @@
             </p>
             <hr style="margin: 25px auto; width: 60%; border: 1px solid #ccc; opacity: 0.3;">
             <p id="contacto"><strong>¿Deseas ponerte en contacto con nosotros?</strong></p>
-            <p>
+            <p> <!-- informacion de contacto inventada -->
                 ✉️ Correo: <a href="mailto:contacto@colorburst.com">contacto@colorburst.com</a><br>
                 📞 Teléfono: <a href="tel:+528681234567">+52 868 123 4567</a><br>
                 📍 Dirección: Calle de los Colores 123, Matamoros, Tamaulipas, México
             </p>
-        </div>
-    </footer>
-
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</body>
-</html>
+        </div> <!-- fin del contenedor -->
+    </footer> <!-- fin del footer -->
+</body> <!-- fin del body -->
+</html> <!-- fin de la pagina -->
