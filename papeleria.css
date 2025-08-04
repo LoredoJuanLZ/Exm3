@@ -162,21 +162,6 @@ header {
     padding: 5px 0;
 }
 
-.menu li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #FFE66D;
-    transition: width 0.3s ease;
-}
-
-.menu li a:hover::after {
-    width: 100%;
-}
-
 /* Barra de búsqueda alineada a la derecha */
 .search-bar {
     display: flex;
@@ -610,4 +595,5 @@ body.about-page .container {
     margin-left: auto;
     margin-right: auto;
 }
+
 
