@@ -21,7 +21,7 @@
     top: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(to right, #2c3e50, #4b79a1); /* El mismo color del header */
+    background: #2c3e50; /* Color de las cortinas */
     z-index: 10001; /* Por encima del logo */
     display: flex;
     justify-content: center;
@@ -595,5 +595,6 @@ body.about-page .container {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 
