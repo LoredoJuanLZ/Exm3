@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Evita barras de scroll innecesarias */
+    overflow: hidden; 
     
     /* Animación para que el preloader desaparezca */
     animation: fadeOutPreloader 0.5s ease-out 3.5s forwards; /* Duración, retraso y que se quede en el estado final */
@@ -188,7 +188,7 @@ header {
     padding: 5px;
 }
 
-/* Hero Section */
+/* sección del hero*/
 #hero {
     position: relative;
     background: linear-gradient(120deg, #ffe7e7, #fff2cc);
@@ -228,7 +228,7 @@ header {
     box-shadow: 5px 5px 15px rgba(0,0,0,0.3); 
 }
 
-/* Productos Section */
+/* sección de productos*/
 #productos {
     padding: 60px 20px;
     text-align: center;
@@ -414,7 +414,7 @@ header {
     margin-bottom: 30px;
 }
 
-/* Highlight selected category filter button */
+/* al que sea seleccionado de los input, se hará un poco más grande y cambiará un poco el color de fondo para distinguirlo */
 input#todos:checked ~ .categorias-botones label[for="todos"],
 input#escritura:checked ~ .categorias-botones label[for="escritura"],
 input#cuadernos:checked ~ .categorias-botones label[for="cuadernos"],
@@ -424,7 +424,6 @@ input#accesorios:checked ~ .categorias-botones label[for="accesorios"] {
     transform: scale(1.05);
 }
 
-/* Product visibility based on filter */
 .categoria-producto {
   display: none;
 }
@@ -517,7 +516,7 @@ input#accesorios:checked ~ .categorias-botones label[for="accesorios"] {
     display: block;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (min-width: 768px) {
     .hero-content {
         flex-direction: row;
@@ -532,7 +531,7 @@ input#accesorios:checked ~ .categorias-botones label[for="accesorios"] {
 
 /* Footer */
 footer {
-    background: linear-gradient(to right, #2c3e50, #4b79a1); /* degradado azul moderno */
+    background: linear-gradient(to right, #2c3e50, #4b79a1); /* degradado azul */
     color: #f0f0f0;
     padding: 50px 20px;
     text-align: center;
@@ -593,6 +592,7 @@ body.about-page .container {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 
 
